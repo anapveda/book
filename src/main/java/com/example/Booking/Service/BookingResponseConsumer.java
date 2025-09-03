@@ -1,6 +1,7 @@
 package com.example.Booking.Service;
 
 import com.example.Booking.Model.Booking;
+import com.example.Booking.Model.BookingResponse;
 import com.example.Booking.Repository.BookingRepository;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
