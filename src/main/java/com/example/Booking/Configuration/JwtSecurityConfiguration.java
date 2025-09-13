@@ -24,7 +24,7 @@ public class JwtSecurityConfiguration {
         return http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers(HttpMethod.POST, "/book/**").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.POST, "/book/**").hasAnyRole("ADMIN","CUSTOMER")
                         .requestMatchers(HttpMethod.DELETE, "/book/**").hasRole("ADMIN")
                         .requestMatchers(HttpMethod.GET, "/book/**").hasAnyRole("ADMIN", "CUSTOMER")
                         .anyRequest().authenticated()

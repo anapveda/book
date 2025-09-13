@@ -2,15 +2,16 @@ package com.example.Booking.Model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Entity
+@NoArgsConstructor
 @Table(name = "booking")
 public class Booking {
     @Id
     private String bookingId;   // generated UUID
-
-    private Long userId;
+    private String userName;
     private Long arenaId;
     private Long courtId;
     private String date;

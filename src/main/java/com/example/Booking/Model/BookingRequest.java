@@ -3,9 +3,10 @@ package com.example.Booking.Model;
 import lombok.Data;
 
 @Data
+
 public class BookingRequest {
     private String bookingId;  // generated in BookingService
-    private Long userId;
+    private String userName;
     private Long arenaId;
     private Long courtId;
     private String date;       // e.g. 2025-09-02
